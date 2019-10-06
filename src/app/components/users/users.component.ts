@@ -9,7 +9,7 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  showExtended: boolean = true;
+  showExteneded: boolean = true;
   loaded: boolean = false;
 
   constructor() { }
@@ -47,23 +47,24 @@ export class UsersComponent implements OnInit {
             state: 'FL'
           }
         }
-      ];
+      ]
       this.loaded = true;
     }, 2000);
 
-    // this.addUser({
-    //   firstName: 'David',
-    //   lastName: 'Jackson',
-    //   age: 44,
-    //   address: {
-    //     street: '22 Dillard St',
-    //     city: 'Orlando',
-    //     state: 'FL'
-    //   }
-    // });
 
-    this.showExtended = false;
+    //   this.addUser({
+    //     firstName: 'David',
+    //     lastName: 'Jackson',
+    //     age: 44,
+    //     address: {
+    //       street: '22 Dillard St',
+    //       city: 'Orlando',
+    //       state: 'FL'
+    //     }
+    //   })
   }
+
+
 
 
 
