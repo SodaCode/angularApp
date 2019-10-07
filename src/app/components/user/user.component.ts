@@ -12,8 +12,7 @@ export class UserComponent implements OnInit {
   user: User;
 
   // method
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.user = {
@@ -25,7 +24,6 @@ export class UserComponent implements OnInit {
         city: 'Boston',
         state: 'MA'
       }
-    }
+    };
   }
 }
-

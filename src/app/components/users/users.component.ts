@@ -9,67 +9,54 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  showExteneded: boolean = true;
+  showExtended: boolean = true;
   loaded: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    setTimeout(() => {
-      this.users = [
-        {
-          firstName: 'John',
-          lastName: 'Doe',
-          age: 30,
-          address: {
-            street: '50 Main St',
-            city: 'Boston',
-            state: 'MA'
-          }
-        },
-        {
-          firstName: 'Kevin',
-          lastName: 'Hartts',
-          age: 34,
-          address: {
-            street: '20 Spool St',
-            city: 'Lindmast',
-            state: 'MA'
-          }
-        },
-        {
-          firstName: 'Karen',
-          lastName: 'Williams',
-          age: 26,
-          address: {
-            street: '55 Millard St',
-            city: 'Miami',
-            state: 'FL'
-          }
+    this.users = [
+      {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        address: {
+          street: '50 Main st',
+          city: 'Boston',
+          state: 'MA'
         }
-      ]
-      this.loaded = true;
-    }, 2000);
+      },
+      {
+        firstName: 'Kevin',
+        lastName: 'Johnson',
+        age: 34,
+        address: {
+          street: '20 School st',
+          city: 'Lynn',
+          state: 'MA'
+        }
+      },
+      {
+        firstName: 'Karen',
+        lastName: 'Williams',
+        age: 26,
+        address: {
+          street: '55 Mill st',
+          city: 'Miami',
+          state: 'FL'
+        }
+      }
+    ];
 
+    this.loaded = true;
 
-    //   this.addUser({
-    //     firstName: 'David',
-    //     lastName: 'Jackson',
-    //     age: 44,
-    //     address: {
-    //       street: '22 Dillard St',
-    //       city: 'Orlando',
-    //       state: 'FL'
-    //     }
-    //   })
+    this.addUser({
+      firstName: 'David',
+      lastName: 'Jackson'
+    });
   }
-
-
-
-
 
   addUser(user: User) {
     this.users.push(user);
   }
-
 }
