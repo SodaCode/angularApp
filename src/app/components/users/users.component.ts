@@ -54,10 +54,10 @@ export class UsersComponent implements OnInit {
 
     this.loaded = true;
 
-    this.addUser({
-      firstName: 'David',
-      lastName: 'Jackson'
-    });
+    // this.addUser({
+    //   firstName: 'David',
+    //   lastName: 'Jackson'
+    // });
   }
 
   addUser(user: User) {
