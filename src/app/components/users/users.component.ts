@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
   currentClasses = {};
   currentStyles = {};
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.users = [
@@ -29,7 +29,9 @@ export class UsersComponent implements OnInit {
           state: 'MA'
         },
         image: 'http://lorempixel.com/600/600/people/3',
-        isActive: true
+        isActive: true,
+        balance: 100,
+        registered: new Date('01/02/2019 08:30:00')
       },
       {
         firstName: 'Kevin',
@@ -41,7 +43,9 @@ export class UsersComponent implements OnInit {
           state: 'MA'
         },
         image: 'http://lorempixel.com/600/600/people/2',
-        isActive: false
+        isActive: false,
+        balance: 100,
+        registered: new Date('01/02/2019 08:30:00')
       },
       {
         firstName: 'Karen',
@@ -53,7 +57,9 @@ export class UsersComponent implements OnInit {
           state: 'FL'
         },
         image: 'http://lorempixel.com/600/600/people/1',
-        isActive: true
+        isActive: true,
+        balance: 200,
+        registered: new Date('01/02/2019 08:30:00')
       }
     ];
 
