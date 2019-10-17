@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = true;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.users = [
@@ -27,7 +27,8 @@ export class UsersComponent implements OnInit {
           state: 'MA'
         },
         isActive: true,
-        registered: new Date('01/02/2019 08:30:00')
+        registered: new Date('01/02/2019 08:30:00'),
+        hide: true
       },
       {
         firstName: 'Kevin',
@@ -39,7 +40,8 @@ export class UsersComponent implements OnInit {
           state: 'MA'
         },
         isActive: false,
-        registered: new Date('01/02/2019 08:30:00')
+        registered: new Date('01/02/2019 08:30:00'),
+        hide: true
       },
       {
         firstName: 'Karen',
@@ -51,15 +53,20 @@ export class UsersComponent implements OnInit {
           state: 'FL'
         },
         isActive: true,
-        registered: new Date('01/02/2019 08:30:00')
+        registered: new Date('01/02/2019 08:30:00'),
+        hide: true
       }
     ];
 
     this.loaded = true;
 
-    // this.addUser({
-    //   firstName: 'David',
-    //   lastName: 'Jackson'
-    // });
   }
+
+  addUser(user: User) {
+    this.users.push(user);
+  }
+
+  // toggleHide(user: User) {
+  //   user.hide = !user.hide;
+  // }
 }
