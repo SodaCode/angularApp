@@ -12,8 +12,9 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
+  showUserForm: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.users = [
@@ -59,11 +60,16 @@ export class UsersComponent implements OnInit {
     ];
 
     this.loaded = true;
-
   }
 
   addUser(user: User) {
     this.users.push(user);
+  }
+
+  onSubmit(e) {
+    console.log('123');
+
+    e.preventDefault();
   }
 
   // toggleHide(user: User) {
