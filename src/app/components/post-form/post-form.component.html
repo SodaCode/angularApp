@@ -13,7 +13,6 @@
     <button *ngIf="!isEdit" (click)="addPost(title.value, body.value)" type="submit" class="btn btn-dark btn-block">Add
       Post</button>
 
-    <button *ngIf="isEdit" (click)="addPost(title.value, body.value)" type="submit"
-      class="btn btn-warning btn-block">Update Post</button>
+    <button *ngIf="isEdit" (click)="updatePost()" type="submit" class="btn btn-warning btn-block">Update Post</button>
   </form>
 </div>
